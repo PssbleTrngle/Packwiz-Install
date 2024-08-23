@@ -1,0 +1,9 @@
+name: packwiz-installer
+
+services:
+  installer:
+    build: .
+    volumes:
+      - ./install:/data
+    environment:
+      PACKWIZ_URL: http://host.docker.internal:8080/pack.toml
