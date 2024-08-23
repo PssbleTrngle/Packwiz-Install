@@ -10,6 +10,6 @@ WORKDIR /usr/bin
 
 ENV PATHWIZ_SIDE=both
 
-COPY setup.sh docker-entrypoint.sh
+COPY --chmod=755 setup.sh docker-entrypoint.sh
 
 ENTRYPOINT [ "docker-entrypoint.sh" ]
